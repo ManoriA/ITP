@@ -39,5 +39,6 @@ namespace insert
         private TextBox txtprice;
         private Label lblprice;
         private Button btn_tot;
+        private Label lblTotal;
     }
 }

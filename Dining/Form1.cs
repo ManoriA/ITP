@@ -57,6 +57,7 @@ namespace insert
             this.fQuan = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_tot = new System.Windows.Forms.Button();
+            this.lblTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTempryBill)).BeginInit();
             this.operation.SuspendLayout();
             this.insertGroupbox.SuspendLayout();
@@ -353,11 +354,22 @@ namespace insert
             this.btn_tot.UseVisualStyleBackColor = true;
             this.btn_tot.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblTotal.Location = new System.Drawing.Point(572, 36);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(0, 25);
+            this.lblTotal.TabIndex = 23;
+            // 
             // Form
             // 
             this.BackgroundImage = global::Dining.Properties.Resources.download;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.btn_tot);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.insertGroupbox);
@@ -836,24 +848,34 @@ namespace insert
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dgvTempryBill[5, dgvTempryBill.Rows.Count - 1].Value = "total";
-            dgvTempryBill.Rows[dgvTempryBill.Rows.Count - 1].Cells[5].Style.BackColor = Color.Green;
-            dgvTempryBill.Rows[dgvTempryBill.Rows.Count - 1].Cells[5].Style.ForeColor = Color.Red;
+            float total = 0;
 
-            decimal tot = 0;
-            for(int i =0; i<dgvTempryBill.Rows.Count -1; i++)
+            foreach(DataGridViewRow r in dgvTempryBill.Rows)
             {
-                var value = dgvTempryBill.Rows[i].Cells[5].Value;
-                if(value != DBNull.Value)
-                {
-                    tot += Convert.ToDecimal(value);
-                }
+                total = total + float.Parse(r.Cells[5].Value.ToString());
             }
-            if(tot == 0)
-            {
 
-            }
-            dgvTempryBill.Rows[dgvTempryBill.Rows.Count - 1].Cells[5].Value = tot.ToString();
+            lblTotal.Text ="Rs." +total.ToString()+ ".00";
+                
+        //{
+        //    dgvTempryBill[5, dgvTempryBill.Rows.Count - 1].Value = "total";
+        //    dgvTempryBill.Rows[dgvTempryBill.Rows.Count - 1].Cells[5].Style.BackColor = Color.Green;
+        //    dgvTempryBill.Rows[dgvTempryBill.Rows.Count - 1].Cells[5].Style.ForeColor = Color.Red;
+
+        //    decimal tot = 0;
+        //    for(int i =0; i<dgvTempryBill.Rows.Count -1; i++)
+        //    {
+        //        var value = dgvTempryBill.Rows[i].Cells[5].Value;
+        //        if(value != DBNull.Value)
+        //        {
+        //            tot += Convert.ToDecimal(value);
+        //        }
+        //    }
+        //    if(tot == 0)
+        //    {
+
+        //    }
+        //    dgvTempryBill.Rows[dgvTempryBill.Rows.Count - 1].Cells[5].Value = tot.ToString();
         }
     }
 }
