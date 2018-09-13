@@ -55,7 +55,6 @@ namespace insert
             this.txtItemQty = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.fQuan = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.btn_tot = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTempryBill)).BeginInit();
@@ -66,8 +65,9 @@ namespace insert
             // itemId
             // 
             this.itemId.AutoSize = true;
-            this.itemId.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.itemId.Location = new System.Drawing.Point(17, 121);
+            this.itemId.BackColor = System.Drawing.Color.Transparent;
+            this.itemId.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemId.Location = new System.Drawing.Point(50, 122);
             this.itemId.Name = "itemId";
             this.itemId.Size = new System.Drawing.Size(63, 16);
             this.itemId.TabIndex = 7;
@@ -76,16 +76,17 @@ namespace insert
             // item
             // 
             this.item.AutoSize = true;
-            this.item.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.item.Location = new System.Drawing.Point(17, 169);
+            this.item.BackColor = System.Drawing.Color.Transparent;
+            this.item.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.item.Location = new System.Drawing.Point(50, 170);
             this.item.Name = "item";
-            this.item.Size = new System.Drawing.Size(91, 16);
+            this.item.Size = new System.Drawing.Size(88, 16);
             this.item.TabIndex = 8;
             this.item.Text = "ITEM NAME";
             // 
             // txtItemId
             // 
-            this.txtItemId.Location = new System.Drawing.Point(126, 121);
+            this.txtItemId.Location = new System.Drawing.Point(159, 122);
             this.txtItemId.Name = "txtItemId";
             this.txtItemId.Size = new System.Drawing.Size(167, 22);
             this.txtItemId.TabIndex = 13;
@@ -97,12 +98,13 @@ namespace insert
             this.dgvTempryBill.AllowUserToAddRows = false;
             this.dgvTempryBill.AllowUserToDeleteRows = false;
             this.dgvTempryBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTempryBill.BackgroundColor = System.Drawing.Color.White;
             this.dgvTempryBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTempryBill.Location = new System.Drawing.Point(670, 94);
+            this.dgvTempryBill.Location = new System.Drawing.Point(415, 35);
             this.dgvTempryBill.Name = "dgvTempryBill";
             this.dgvTempryBill.ReadOnly = true;
             this.dgvTempryBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTempryBill.Size = new System.Drawing.Size(573, 359);
+            this.dgvTempryBill.Size = new System.Drawing.Size(636, 359);
             this.dgvTempryBill.TabIndex = 15;
             this.dgvTempryBill.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTempryBill_CellContentClick);
             this.dgvTempryBill.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvTempryBill_MouseClick);
@@ -110,7 +112,8 @@ namespace insert
             // save
             // 
             this.save.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.save.Location = new System.Drawing.Point(79, 354);
+            this.save.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save.Location = new System.Drawing.Point(126, 354);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(137, 40);
             this.save.TabIndex = 16;
@@ -121,9 +124,10 @@ namespace insert
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnUpdate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Location = new System.Drawing.Point(152, 23);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(87, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(87, 28);
             this.btnUpdate.TabIndex = 17;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -132,9 +136,10 @@ namespace insert
             // btnPrint
             // 
             this.btnPrint.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnPrint.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.Location = new System.Drawing.Point(274, 21);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(82, 23);
+            this.btnPrint.Size = new System.Drawing.Size(82, 30);
             this.btnPrint.TabIndex = 18;
             this.btnPrint.Text = "PRINT";
             this.btnPrint.UseVisualStyleBackColor = false;
@@ -142,27 +147,26 @@ namespace insert
             // 
             // operation
             // 
-            this.operation.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.operation.BackColor = System.Drawing.Color.Transparent;
             this.operation.Controls.Add(this.btnClear);
             this.operation.Controls.Add(this.btnPrint);
             this.operation.Controls.Add(this.btnUpdate);
             this.operation.Controls.Add(this.btnRefresh);
             this.operation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.operation.Location = new System.Drawing.Point(719, 578);
+            this.operation.Location = new System.Drawing.Point(408, 400);
             this.operation.Name = "operation";
-            this.operation.Size = new System.Drawing.Size(524, 57);
+            this.operation.Size = new System.Drawing.Size(493, 57);
             this.operation.TabIndex = 19;
             this.operation.TabStop = false;
-            this.operation.Text = "OPERATION";
             this.operation.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.Location = new System.Drawing.Point(374, 21);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(92, 23);
+            this.btnClear.Size = new System.Drawing.Size(92, 30);
             this.btnClear.TabIndex = 19;
             this.btnClear.Text = "DELETE";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -171,10 +175,10 @@ namespace insert
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.Location = new System.Drawing.Point(47, 21);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(76, 23);
+            this.btnRefresh.Size = new System.Drawing.Size(76, 30);
             this.btnRefresh.TabIndex = 21;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -182,8 +186,10 @@ namespace insert
             // 
             // insertGroupbox
             // 
-            this.insertGroupbox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.insertGroupbox.BackgroundImage = global::Dining.Properties.Resources.basque_cake;
+            this.insertGroupbox.BackColor = System.Drawing.Color.PowderBlue;
+            this.insertGroupbox.Controls.Add(this.operation);
+            this.insertGroupbox.Controls.Add(this.btn_tot);
+            this.insertGroupbox.Controls.Add(this.dgvTempryBill);
             this.insertGroupbox.Controls.Add(this.label3);
             this.insertGroupbox.Controls.Add(this.lblDate);
             this.insertGroupbox.Controls.Add(this.txtDate);
@@ -202,9 +208,9 @@ namespace insert
             this.insertGroupbox.Controls.Add(this.txtItemId);
             this.insertGroupbox.Controls.Add(this.item);
             this.insertGroupbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insertGroupbox.Location = new System.Drawing.Point(72, 143);
+            this.insertGroupbox.Location = new System.Drawing.Point(150, 59);
             this.insertGroupbox.Name = "insertGroupbox";
-            this.insertGroupbox.Size = new System.Drawing.Size(329, 408);
+            this.insertGroupbox.Size = new System.Drawing.Size(1135, 513);
             this.insertGroupbox.TabIndex = 20;
             this.insertGroupbox.TabStop = false;
             this.insertGroupbox.Enter += new System.EventHandler(this.insert_Enter);
@@ -215,7 +221,7 @@ namespace insert
             this.label3.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Maroon;
-            this.label3.Location = new System.Drawing.Point(63, 24);
+            this.label3.Location = new System.Drawing.Point(95, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(184, 16);
             this.label3.TabIndex = 35;
@@ -225,23 +231,24 @@ namespace insert
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.lblDate.Location = new System.Drawing.Point(17, 73);
+            this.lblDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblDate.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(50, 74);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(67, 16);
+            this.lblDate.Size = new System.Drawing.Size(70, 16);
             this.lblDate.TabIndex = 34;
             this.lblDate.Text = "BIll Date";
             // 
             // txtDate
             // 
-            this.txtDate.Location = new System.Drawing.Point(126, 73);
+            this.txtDate.Location = new System.Drawing.Point(159, 74);
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(167, 22);
             this.txtDate.TabIndex = 33;
             // 
             // txtprice
             // 
-            this.txtprice.Location = new System.Drawing.Point(126, 303);
+            this.txtprice.Location = new System.Drawing.Point(159, 304);
             this.txtprice.Name = "txtprice";
             this.txtprice.Size = new System.Drawing.Size(167, 22);
             this.txtprice.TabIndex = 32;
@@ -250,8 +257,9 @@ namespace insert
             // lblprice
             // 
             this.lblprice.AutoSize = true;
-            this.lblprice.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.lblprice.Location = new System.Drawing.Point(17, 306);
+            this.lblprice.BackColor = System.Drawing.Color.Transparent;
+            this.lblprice.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblprice.Location = new System.Drawing.Point(50, 307);
             this.lblprice.Name = "lblprice";
             this.lblprice.Size = new System.Drawing.Size(44, 16);
             this.lblprice.TabIndex = 31;
@@ -260,10 +268,11 @@ namespace insert
             // lblUnit
             // 
             this.lblUnit.AutoSize = true;
-            this.lblUnit.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.lblUnit.Location = new System.Drawing.Point(17, 212);
+            this.lblUnit.BackColor = System.Drawing.Color.Transparent;
+            this.lblUnit.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUnit.Location = new System.Drawing.Point(50, 213);
             this.lblUnit.Name = "lblUnit";
-            this.lblUnit.Size = new System.Drawing.Size(93, 16);
+            this.lblUnit.Size = new System.Drawing.Size(89, 16);
             this.lblUnit.TabIndex = 21;
             this.lblUnit.Text = "UNIT PRICE";
             // 
@@ -288,7 +297,7 @@ namespace insert
             // ddfoodname
             // 
             this.ddfoodname.FormattingEnabled = true;
-            this.ddfoodname.Location = new System.Drawing.Point(126, 166);
+            this.ddfoodname.Location = new System.Drawing.Point(159, 167);
             this.ddfoodname.Name = "ddfoodname";
             this.ddfoodname.Size = new System.Drawing.Size(167, 24);
             this.ddfoodname.TabIndex = 28;
@@ -296,7 +305,7 @@ namespace insert
             // 
             // txtUnitPrice
             // 
-            this.txtUnitPrice.Location = new System.Drawing.Point(126, 212);
+            this.txtUnitPrice.Location = new System.Drawing.Point(159, 213);
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Size = new System.Drawing.Size(167, 22);
             this.txtUnitPrice.TabIndex = 27;
@@ -305,7 +314,7 @@ namespace insert
             // 
             // txtItemQty
             // 
-            this.txtItemQty.Location = new System.Drawing.Point(126, 260);
+            this.txtItemQty.Location = new System.Drawing.Point(159, 261);
             this.txtItemQty.Name = "txtItemQty";
             this.txtItemQty.Size = new System.Drawing.Size(167, 22);
             this.txtItemQty.TabIndex = 26;
@@ -323,30 +332,19 @@ namespace insert
             // fQuan
             // 
             this.fQuan.AutoSize = true;
-            this.fQuan.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.fQuan.Location = new System.Drawing.Point(17, 260);
+            this.fQuan.BackColor = System.Drawing.Color.Transparent;
+            this.fQuan.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fQuan.Location = new System.Drawing.Point(50, 261);
             this.fQuan.Name = "fQuan";
-            this.fQuan.Size = new System.Drawing.Size(85, 16);
+            this.fQuan.Size = new System.Drawing.Size(81, 16);
             this.fQuan.TabIndex = 23;
             this.fQuan.Text = "QUANTITY";
             this.fQuan.Click += new System.EventHandler(this.fQun_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Cambria", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label4.Location = new System.Drawing.Point(25, 94);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(464, 47);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "REGENT COUNTRY CLUB";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
             // btn_tot
             // 
-            this.btn_tot.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_tot.Location = new System.Drawing.Point(1031, 477);
+            this.btn_tot.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_tot.Location = new System.Drawing.Point(907, 415);
             this.btn_tot.Name = "btn_tot";
             this.btn_tot.Size = new System.Drawing.Size(129, 36);
             this.btn_tot.TabIndex = 22;
@@ -366,15 +364,11 @@ namespace insert
             // 
             // Form
             // 
-            this.BackgroundImage = global::Dining.Properties.Resources.download;
+            this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1310, 681);
             this.Controls.Add(this.lblTotal);
-            this.Controls.Add(this.btn_tot);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.insertGroupbox);
-            this.Controls.Add(this.operation);
-            this.Controls.Add(this.dgvTempryBill);
             this.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Form";
             this.Load += new System.EventHandler(this.Form_Load);

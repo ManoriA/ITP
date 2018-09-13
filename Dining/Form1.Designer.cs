@@ -34,8 +34,7 @@ namespace insert
         private Label lblDate;
         private TextBox txtDate;
         private Label label3;
-       private IContainer components;
-        private Label label4;
+        private IContainer components;
         private TextBox txtprice;
         private Label lblprice;
         private Button btn_tot;

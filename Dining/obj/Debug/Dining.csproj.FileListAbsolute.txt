@@ -48,3 +48,6 @@ C:\Dining\Dining\obj\Debug\Dining.Properties.Resources.resources
 C:\Dining\Dining\obj\Debug\Dining.csproj.GenerateResource.Cache
 C:\Dining\Dining\obj\Debug\RdlCompile.cache
 C:\Dining\Dining\obj\Debug\RdlCompile.compiled
+F:\Manori\ITP\Dining\bin\Debug\Dining.exe.config
+F:\Manori\ITP\Dining\obj\Debug\Dining.exe
+F:\Manori\ITP\Dining\obj\Debug\Dining.pdb
