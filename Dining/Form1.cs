@@ -42,6 +42,7 @@ namespace insert
             this.btnClear = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.insertGroupbox = new System.Windows.Forms.GroupBox();
+            this.btn_tot = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.txtDate = new System.Windows.Forms.TextBox();
@@ -50,13 +51,12 @@ namespace insert
             this.lblUnit = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.Label();
-            this.ddfoodname = new System.Windows.Forms.ComboBox();
             this.txtUnitPrice = new System.Windows.Forms.TextBox();
             this.txtItemQty = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.fQuan = new System.Windows.Forms.Label();
-            this.btn_tot = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.ddfoodname = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTempryBill)).BeginInit();
             this.operation.SuspendLayout();
             this.insertGroupbox.SuspendLayout();
@@ -67,7 +67,7 @@ namespace insert
             this.itemId.AutoSize = true;
             this.itemId.BackColor = System.Drawing.Color.Transparent;
             this.itemId.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemId.Location = new System.Drawing.Point(50, 122);
+            this.itemId.Location = new System.Drawing.Point(50, 170);
             this.itemId.Name = "itemId";
             this.itemId.Size = new System.Drawing.Size(63, 16);
             this.itemId.TabIndex = 7;
@@ -78,7 +78,7 @@ namespace insert
             this.item.AutoSize = true;
             this.item.BackColor = System.Drawing.Color.Transparent;
             this.item.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item.Location = new System.Drawing.Point(50, 170);
+            this.item.Location = new System.Drawing.Point(50, 121);
             this.item.Name = "item";
             this.item.Size = new System.Drawing.Size(88, 16);
             this.item.TabIndex = 8;
@@ -86,7 +86,7 @@ namespace insert
             // 
             // txtItemId
             // 
-            this.txtItemId.Location = new System.Drawing.Point(159, 122);
+            this.txtItemId.Location = new System.Drawing.Point(159, 170);
             this.txtItemId.Name = "txtItemId";
             this.txtItemId.Size = new System.Drawing.Size(167, 22);
             this.txtItemId.TabIndex = 13;
@@ -168,7 +168,7 @@ namespace insert
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(92, 30);
             this.btnClear.TabIndex = 19;
-            this.btnClear.Text = "DELETE";
+            this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.delete_Click);
             // 
@@ -214,6 +214,17 @@ namespace insert
             this.insertGroupbox.TabIndex = 20;
             this.insertGroupbox.TabStop = false;
             this.insertGroupbox.Enter += new System.EventHandler(this.insert_Enter);
+            // 
+            // btn_tot
+            // 
+            this.btn_tot.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_tot.Location = new System.Drawing.Point(907, 415);
+            this.btn_tot.Name = "btn_tot";
+            this.btn_tot.Size = new System.Drawing.Size(129, 36);
+            this.btn_tot.TabIndex = 22;
+            this.btn_tot.Text = "Total Price";
+            this.btn_tot.UseVisualStyleBackColor = true;
+            this.btn_tot.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -294,15 +305,6 @@ namespace insert
             this.txtID.TabIndex = 29;
             this.txtID.Visible = false;
             // 
-            // ddfoodname
-            // 
-            this.ddfoodname.FormattingEnabled = true;
-            this.ddfoodname.Location = new System.Drawing.Point(159, 167);
-            this.ddfoodname.Name = "ddfoodname";
-            this.ddfoodname.Size = new System.Drawing.Size(167, 24);
-            this.ddfoodname.TabIndex = 28;
-            this.ddfoodname.SelectedIndexChanged += new System.EventHandler(this.txtfoodname_SelectedIndexChanged);
-            // 
             // txtUnitPrice
             // 
             this.txtUnitPrice.Location = new System.Drawing.Point(159, 213);
@@ -341,17 +343,6 @@ namespace insert
             this.fQuan.Text = "QUANTITY";
             this.fQuan.Click += new System.EventHandler(this.fQun_Click);
             // 
-            // btn_tot
-            // 
-            this.btn_tot.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_tot.Location = new System.Drawing.Point(907, 415);
-            this.btn_tot.Name = "btn_tot";
-            this.btn_tot.Size = new System.Drawing.Size(129, 36);
-            this.btn_tot.TabIndex = 22;
-            this.btn_tot.Text = "Total Price";
-            this.btn_tot.UseVisualStyleBackColor = true;
-            this.btn_tot.Click += new System.EventHandler(this.button1_Click);
-            // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
@@ -361,6 +352,16 @@ namespace insert
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(0, 25);
             this.lblTotal.TabIndex = 23;
+            // 
+            // ddfoodname
+            // 
+            this.ddfoodname.AccessibleDescription = "";
+            this.ddfoodname.FormattingEnabled = true;
+            this.ddfoodname.Location = new System.Drawing.Point(159, 121);
+            this.ddfoodname.Name = "ddfoodname";
+            this.ddfoodname.Size = new System.Drawing.Size(167, 24);
+            this.ddfoodname.TabIndex = 1;
+            this.ddfoodname.SelectedIndexChanged += new System.EventHandler(this.txtfoodname_SelectedIndexChanged);
             // 
             // Form
             // 
@@ -417,7 +418,7 @@ namespace insert
         {
 
         }
-
+        
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
 
@@ -667,23 +668,57 @@ namespace insert
             {
                 MessageBox.Show("You must select a type", "Error");
             }
+
+            else  if (ddfoodname.SelectedIndex >= 0)
+            {
+               
+                string fid = ddfoodname.SelectedValue.ToString();
+
+               if( fid.All(Char.IsDigit)){
+
+                    txtItemId.Text = fid;
+                    txtItemId.Enabled = false;
+
+                    DBConnect db = new DBConnect();
+                    String q = "select UnitPrice from newmenu where foodid = " + fid + "  ";
+                    MySqlCommand cmd = new MySqlCommand(q, db.con);
+
+                    string uprice = cmd.ExecuteScalar().ToString();
+
+                    txtUnitPrice.Text = uprice;
+                    txtUnitPrice.Enabled = false;
+
+                }
+                     
+            }
+      
         }
 
         public void fillcomb()
         {
 
-            List<String> foodItem = new List<string>();
-            DBConnect db = new DBConnect();
-            String q = "select name from newmenu";
+            //List<String> foodItem = new List<string>();
+            //DBConnect db = new DBConnect();
+            //String q = "select name from newmenu";
+            //MySqlCommand cmd = new MySqlCommand(q, db.con);
+            //MySqlDataReader r = cmd.ExecuteReader();
+
+            //while (r.Read())
+            //{
+            //    foodItem.Add(r[0].ToString());
+            //}
+
+            //ddfoodname.DataSource = foodItem;
+            DBConnect db = new DBConnect();         
+            String q  = " select name,foodid from newmenu";        
+            DataTable dt = new DataTable();         
             MySqlCommand cmd = new MySqlCommand(q, db.con);
-            MySqlDataReader r = cmd.ExecuteReader();
+            dt.Load(cmd.ExecuteReader());
 
-            while (r.Read())
-            {
-                foodItem.Add(r[0].ToString());
-            }
-
-            ddfoodname.DataSource = foodItem;
+            ddfoodname.DataSource = dt;
+            ddfoodname.DisplayMember = "name";
+            ddfoodname.ValueMember = "foodid";
+           
         }
 
         private void label3_Click_1(object sender, EventArgs e)

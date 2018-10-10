@@ -19,10 +19,12 @@ namespace Dining
 
         private void Bill_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'hotelDataSet.tempbill' table. You can move, or remove it, as needed.
-            this.tempbillTableAdapter.Fill(this.hotelDataSet.tempbill);
-            this.reportViewer1.RefreshReport();
+
         }
+        //    // TODO: This line of code loads data into the 'hotelDataSet.tempbill' table. You can move, or remove it, as needed.
+        //    this.tempbillTableAdapter.Fill(this.hotelDataSet.tempbill);
+        //    this.reportViewer1.RefreshReport();
+        //}
 
         private void tempbillBindingSource_CurrentChanged(object sender, EventArgs e)
         {
